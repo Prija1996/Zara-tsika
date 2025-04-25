@@ -1,0 +1,365 @@
+
+:root {
+  --couleur-principale: #008B8B;
+  --couleur-secondaire: #FFA500;
+  --couleur-texte: #fff;
+  --couleur-fond: #f9f9f9;
+  --ombre: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  line-height: 1.6;
+  overflow: auto;
+}
+
+/* Barre de Navigation */
+.barre-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--couleur-principale);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.barre-navigation .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--couleur-texte);
+  text-decoration: none;
+}
+
+.barre-navigation .menu-navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.barre-navigation .menu-navigation a {
+  color: var(--couleur-texte);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.barre-navigation .menu-navigation a:hover {
+  color: var(--couleur-secondaire);
+  transform: scale(1.1);
+}
+
+.barre-navigation .menu-navigation a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--couleur-secondaire);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.barre-navigation .menu-navigation a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Bannière Principale */
+.banniere {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--couleur-texte);
+}
+
+.banniere h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banniere p {
+  font-size: 1.2rem;
+}
+
+/* Contenu Principal */
+.conteneur {
+  padding: 20px;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.carte {
+  background-color: var(--couleur-fond);
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carte img {
+  width: 100%;
+  height: auto;
+}
+
+.carte h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.carte button {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.carte button:hover {
+  background-color: var(--couleur-secondaire);
+}
+
+/* Modale */
+.modale {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contenu-modale {
+  background-color: var(--couleur-fond);
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: var(--ombre);
+  position: relative;
+}
+
+.fermer-modale {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 2rem;
+  color: var(--couleur-texte);
+  cursor: pointer;
+  background-color: var(--couleur-principale);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--couleur-texte);
+}
+
+/* Hiérarchie des Modales */
+#modal-bus-details-1,
+#modal-bus-details-2,
+#modal-restaurant-details-1,
+#modal-restaurant-details-2,
+#modal-supermarche-details-1,
+#modal-supermarche-details-2 {
+  z-index: 1001;
+}
+
+/* Boutons dans les listes */
+.bouton-liste {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.bouton-liste:hover {
+  background-color: var(--couleur-secondaire);
+}
+
+/* Bouton Localiser */
+.localiser {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.localiser:hover {
+  background-color: var(--couleur-secondaire);
+}
+
+/* Pied de Page */
+footer {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  text-align: center;
+  padding: 20px;
+}
+
+.reseaux-sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.reseaux-sociaux a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+.boite-reseau {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Forme circulaire */
+  background-color: transparent; /* Fond transparent par défaut */
+  border: 2px solid var(--couleur-texte); /* Bordure blanche */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.boite-reseau i {
+  font-size: 1.8rem; /* Ajuste la taille des icônes pour qu'elles rentrent dans le bloc */
+  color: var(--couleur-texte); /* Icônes en blanc */
+  transition: color 0.3s ease;
+}
+
+/* Hover sur la boîte */
+.boite-reseau:hover {
+  background-color: var(--couleur-secondaire); /* Fond orange au survol */
+  border-color: var(--couleur-secondaire); /* Bordure orange au survol */
+  transform: scale(1.1); /* Effet d'agrandissement */
+}
+
+.boite-reseau:hover i {
+  color: var(--couleur-fond); /* Icônes en blanc sur fond orange */
+}
+
+
+/* Styles pour les Puces */
+.contenu-modale ul {
+  list-style-type: none;
+}
+
+/* Carte de Chargement */
+.carte-chargement {
+  background-color: var(--couleur-fond);
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.chargement {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--couleur-principale);
+  border-top: 4px solid var(--couleur-secondaire);
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.carte-chargement h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.carte-chargement p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+
+
+
+
+
+/* Styles communs pour le bouton flottant */
+
+.theme-button-floating:hover {
+  background-color: #FF8C00; /* Changement de couleur au survol */
+}
+
+/* Masquer le bouton si une fenêtre modale est ouverte */
+.modal-open .theme-button-floating {
+  display: none; /* Cache le bouton */
+}
+
+
+.theme-button-floating {
+  position: fixed; /* Fixe le bouton sur l'écran */
+  bottom: 20px; /* Distance depuis le bas */
+  right: 20px; /* Distance depuis la droite */
+  background-color: var(--couleur-secondaire); /* Couleur secondaire */
+  color: var(--couleur-texte); /* Couleur de l'icône */
+  width: 50px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  border-radius: 50%; /* Forme circulaire */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem; /* Taille de l'icône */
+  box-shadow: var(--ombre); /* Ombre pour un effet visuel */
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* S'assure que le bouton reste au-dessus des autres éléments */
+}
