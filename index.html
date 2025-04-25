@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zara'tsika</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Barre de Navigation -->
+  <nav class="barre-navigation">
+    <a href="#" class="logo">Zara'tsika</a>
+    <div class="menu-navigation">
+      <a href="#">Accueil</a>
+      <a href="#">Province</a>
+      <a href="#">A propos</a>
+    </div>
+  </nav>
+
+  <!-- Bannière Principale -->
+  <header class="banniere">
+    <h1>Tongasoa eto @ Zara'tsika</h1>
+    <p>Laony tanteraka aho mitady an'izao Bus makany aminao izao 😁</br>
+	Dia avy eo hoe aiza no hikaly 😅😅
+	</p>
+  </header>
+
+
+	<div class="fade-in">
+	  <!-- Bouton fixe -->
+	    <a href="./sombre/dark.html" class="theme-button-floating">
+			<i id="theme-icon" class="bx bx-moon"></i> <!-- Icône par défaut : soleil -->
+		</a>
+	</div>
+
+
+
+  <!-- Contenu Principal -->
+  <div class="conteneur">
+    <div class="grille">
+      <!-- Carte 1 -->
+      <div class="carte" data-target="modal-bus">
+        <img src="https://picsum.photos/200/300" alt="Bus">
+        <h3>BUS</h3>
+        <button onclick="ouvrirModal('modal-bus')">Voir en détail</button>
+      </div>
+      <!-- Carte 2 -->
+      <div class="carte" data-target="modal-restaurant">
+        <img src="https://picsum.photos/200/300?random=1" alt="Restaurant">
+        <h3>RESTAURANT</h3>
+        <button onclick="ouvrirModal('modal-restaurant')">Voir en détail</button>
+      </div>
+      <!-- Carte 3 -->
+      <div class="carte" data-target="modal-supermarche">
+        <img src="https://picsum.photos/200/300?random=2" alt="Supermarché">
+        <h3>SUPERMARCHÉ</h3>
+        <button onclick="ouvrirModal('modal-supermarche')">Voir en détail</button>
+      </div>
+      <!-- Carte avec Chargement -->
+      <div class="carte carte-chargement">
+        <div class="chargement"></div>
+        <h3>Prochainement...</h3>
+        <p>Nouveaux services à venir !</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Première Modale : Liste des Bus -->
+  <div id="modal-bus" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-bus')">&times;</span>
+      <h2>BUS</h2>
+      <p>Aty jerena fa sao very any a 😎😎</p>
+      <ul>
+        <li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-1')">009</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-2')">015</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-3')">017</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-4')">105 (Misy Tsipika Mena) </button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-5')">106</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-6')">109</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-7')">110</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-8')">112</button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-9')">114 (Maitso) </button></li>
+		<li><button class="bouton-liste" onclick="ouvrirModal('modal-bus-details-10')">115</button></li>
+      </ul>
+    </div>
+  </div>
+
+	<!-- Modal pour 009 -->
+	<div id="modal-bus-details-1" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-1')">&times;</span>
+		<h2>Bus N°009</h2>
+		<p>Anosizato - Analakely</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 015 -->
+	<div id="modal-bus-details-2" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-2')">&times;</span>
+		<h2>Bus N°015</h2>
+		<p>Mandroseza - 67ha</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 017 -->
+	<div id="modal-bus-details-3" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-3')">&times;</span>
+		<h2>Bus N°017</h2>
+		<p>Ambohipo - Mahamasina</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 105 -->
+	<div id="modal-bus-details-4" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-4')">&times;</span>
+		<h2>Bus N°105 (Misy Tsipika Mena)</h2>
+		<p> Analakely - Ambomanarina</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 106 -->
+	<div id="modal-bus-details-5" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-5')">&times;</span>
+		<h2>Bus N°106</h2>
+		<p>Alarobia - Analakely</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 109 -->
+	<div id="modal-bus-details-6" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-6')">&times;</span>
+		<h2>Bus N°109</h2>
+		<p>67ha - Ambohitrarahaba (Anosizato Atsinanana - Antanandrano)</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 110 -->
+	<div id="modal-bus-details-7" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-7')">&times;</span>
+		<h2>Bus N°110</h2>
+		<p>Anosizato - Analakely</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 112 -->
+	<div id="modal-bus-details-8" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-8')">&times;</span>
+		<h2>Bus N°112</h2>
+		<p>Analakely - Morondava</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 114 -->
+	<div id="modal-bus-details-9" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-9')">&times;</span>
+		<h2>Bus N°114 (Maitso)</h2>
+		<p>(Maitso) Analakely - Ambohijanahary</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Modal pour 115 -->
+	<div id="modal-bus-details-10" class="modale">
+	  <div class="contenu-modale">
+		<span class="fermer-modale" onclick="fermerModal('modal-bus-details-10')">&times;</span>
+		<h2>Bus N°115</h2>
+		<p>Analakely - Tsimbazaza</p>
+		<button class="localiser">📍 Localiser</button>
+	  </div>
+	</div>
+
+	<!-- Mba ampio ao azafady... -->
+
+
+  <!-- Première Modale : Liste des Restaurants -->
+  <div id="modal-restaurant" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-restaurant')">&times;</span>
+      <h2>RESTAURANT</h2>
+      <p>Andao hanao pro-Kaly.</p>
+      <ul>
+        <li><button class="bouton-liste" onclick="ouvrirModal('modal-restaurant-details-1')">Hotely gasy</button></li>
+        <li><button class="bouton-liste" onclick="ouvrirModal('modal-restaurant-details-2')">Tsakitsaky</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deuxième Modale : Détails du Hotely gasy -->
+  <div id="modal-restaurant-details-1" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-restaurant-details-1')">&times;</span>
+      <h2>Hotely gasy</h2>
+      <p>Manao nahandro gasy maro samyhafa :</p>
+      <ul>
+        <li>Laoka</li>
+        <li>Lasopy</li>
+      </ul>
+      <button class="localiser">📍 Localiser</button>
+    </div>
+  </div>
+
+  <!-- Troisième Modale : Détails du Tsakitsaky -->
+  <div id="modal-restaurant-details-2" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-restaurant-details-2')">&times;</span>
+      <h2>Tsakitsaky</h2>
+      <p>Mombamomba :</p>
+      <ul>
+        <li>Cuisine Italienne</li>
+        <li>Spécialités Locales</li>
+      </ul>
+      <button class="localiser">📍 Localiser</button>
+    </div>
+  </div>
+
+  <!-- Première Modale : Liste des Supermarchés -->
+  <div id="modal-supermarche" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-supermarche')">&times;</span>
+      <h2>SUPERMARCHÉ</h2>
+      <p>Accédez aux listes des supermarchés proches.</p>
+      <ul>
+        <li><button class="bouton-liste" onclick="ouvrirModal('modal-supermarche-details-1')">Shop U</button></li>
+        <li><button class="bouton-liste" onclick="ouvrirModal('modal-supermarche-details-2')">Jumbo</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Deuxième Modale : Détails du Shop U -->
+  <div id="modal-supermarche-details-1" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-supermarche-details-1')">&times;</span>
+      <h2>Shop U</h2>
+      <p>Ireo toerana mety ahitana azy:</p>
+      <ul>
+        <li>Ankorahotra</li>
+        <li>Mba tohizo</li>
+      </ul>
+      <button class="localiser">📍 Localiser</button>
+    </div>
+  </div>
+
+  <!-- Troisième Modale : Détails du Jumbo -->
+  <div id="modal-supermarche-details-2" class="modale">
+    <div class="contenu-modale">
+      <span class="fermer-modale" onclick="fermerModal('modal-supermarche-details-2')">&times;</span>
+      <h2>Jumbo</h2>
+      <p>Toerana mety ahitana azy</p>
+      <ul>
+        <li>Tanjombato</li>
+        <li>Ankorondrano</li>
+      </ul>
+      <button class="localiser">📍 Localiser</button>
+    </div>
+  </div>
+
+  <!-- Pied de Page -->
+  <footer>
+  <div class="reseaux-sociaux">
+    <a href="https://facebook.com" target="_blank">
+      <div class="boite-reseau">
+        <i class='bx bxl-facebook-circle'></i>
+      </div>
+    </a>
+    <a href="mailto:randroddy@gmail.com" target="_blank">
+      <div class="boite-reseau">
+        <i class='bx bxs-envelope'></i>
+      </div>
+    </a>
+    <a href="https://github.com" target="_blank">
+      <div class="boite-reseau">
+        <i class='bx bxl-github'></i>
+      </div>
+    </a>
+  </div>
+  </footer>
+  
+
+
+  <script>
+    function ouvrirModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fermerModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; 
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
