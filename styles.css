@@ -177,6 +177,7 @@ body {
 }
 
 .contenu-scroll {
+  max-height: 300px;
   overflow-y: auto;
   padding: 10px;
   flex-grow: 1;
@@ -211,7 +212,7 @@ body {
 
 /* Orientation verticale (côte à côte) */
 .badge-couleur.vertical {
-  flex-direction: row;
+  flex-direction: column;
   height: var(--badge-height, 20px);
   width: var(--badge-width, 40px);
 }
