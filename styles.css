@@ -186,7 +186,6 @@ body {
 
 
 
-
 .bouton-liste {
   display: flex;
   justify-content: space-between;
@@ -221,7 +220,9 @@ body {
   flex: 1; /* Chaque bande prend 50% de la largeur */
 }
 
-
+li span {
+  border: 1px solid #fff;
+}
 
 
 
@@ -279,7 +280,7 @@ body {
   color: var(--couleur-texte);
   border: none;
   padding: 5px 10px;
-  cursor: pointer;
+  cursor: no-drop;
   border-radius: 5px;
   font-size: 0.9rem;
   margin-top: 10px;
