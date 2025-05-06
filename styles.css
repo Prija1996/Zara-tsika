@@ -160,11 +160,72 @@ body {
   color: #333;
   padding: 20px;
   border-radius: 10px;
-  max-width: 90%;
-  text-align: center;
   box-shadow: var(--ombre);
   position: relative;
+  max-height: 60vh; /* Limite la hauteur */
+  overflow-y: auto; /* Active le scroll vertical si nécessaire */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
+.contenu-modale > * {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contenu-scroll {
+  overflow-y: auto;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+
+
+
+
+.bouton-liste {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.badge-couleur {
+  display: flex;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+/* Orientation horizontale (haut/bas) */
+.badge-couleur.horizontal {
+  flex-direction: column;
+  height: var(--badge-height, 20px); /* Hauteur totale */
+  width: var(--badge-width, 40px);   /* Largeur fixe */
+}
+
+.badge-couleur.horizontal div {
+  flex: 1; /* Chaque bande prend 50% de la hauteur */
+}
+
+/* Orientation verticale (côte à côte) */
+.badge-couleur.vertical {
+  flex-direction: row;
+  height: var(--badge-height, 20px);
+  width: var(--badge-width, 40px);
+}
+
+.badge-couleur.vertical div {
+  flex: 1; /* Chaque bande prend 50% de la largeur */
+}
+
+
+
+
+
+
+
 
 .fermer-modale {
   position: absolute;
