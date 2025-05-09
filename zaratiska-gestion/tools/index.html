@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestion de Liste</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/styles.css">
+
+  <!-- PapaParse - Librairie pour lire le CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js "></script>
+
+  <!-- Notre propre script JS -->
+  <script src="../tools/app.js" defer></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .actions {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="file"] {
+      padding: 10px;
+    }
+    .result {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .badge-couleur div {
+      width: 10px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Gestion de Liste</h1>
+
+<div class="actions">
+  <input type="file" id="csvFile" accept=".csv" />
+</div>
+
+<div class="result" id="preview">
+  <p>Veuillez charger un fichier CSV.</p>
+</div>
+
+</body>
+</html>

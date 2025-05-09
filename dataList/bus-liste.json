@@ -1,0 +1,32 @@
+{
+  "bus": [
+    {
+      "id": "modal-bus-details-4",
+      "numero": "105",
+      "description": "Analakely - Ambomanarina",
+      "badge": [
+        "red",
+        "white",
+        "green"
+      ],
+      "note": "Tsipika mena"
+    },
+    {
+      "id": "modal-bus-details-2",
+      "numero": "15",
+      "description": "Mandroseza - 67ha",
+      "badge": [],
+      "note": ""
+    },
+    {
+      "id": "modal-bus-details-1",
+      "numero": "9",
+      "description": "Anosizato - Analakely",
+      "badge": [
+        "white",
+        "blue"
+      ],
+      "note": ""
+    }
+  ]
+}
